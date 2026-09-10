@@ -1,0 +1,1730 @@
+/* =========================================================
+   YARIEL SCOTT
+   CLEANING & HOME SERVICES
+   Main Website Styles
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL VARIABLES
+========================================================= */
+
+:root {
+
+  --green: #075b4f;
+
+  --dark-green: #033d37;
+
+  --light-green: #e8f7f1;
+
+  --gold: #d7a94b;
+
+  --white: #ffffff;
+
+  --black: #12252b;
+
+  --muted: #637178;
+
+  --border: #dce7e4;
+
+  --light-bg: #f7faf9;
+
+  --shadow:
+    0 8px 28px rgba(9, 45, 40, 0.08);
+
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  color: var(--black);
+
+  background: var(--white);
+
+  line-height: 1.55;
+
+}
+
+
+img {
+
+  max-width: 100%;
+
+  display: block;
+
+}
+
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+}
+
+
+button,
+input,
+select,
+textarea {
+
+  font-family: inherit;
+
+}
+
+
+/* =========================================================
+   3. HEADER
+========================================================= */
+
+.header {
+
+  height: 72px;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 0 6%;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #edf1ef;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-right: auto;
+
+}
+
+
+.logo-mark {
+
+  width: 44px;
+
+  height: 44px;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--green);
+
+  font-size: 31px;
+
+  font-weight: 700;
+
+  border-bottom: 3px solid var(--gold);
+
+}
+
+
+.logo-text b {
+
+  display: block;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+}
+
+
+.logo-text small {
+
+  display: block;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: var(--muted);
+
+  font-weight: 700;
+
+  margin-top: 5px;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.header nav {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+}
+
+
+.header nav a {
+
+  position: relative;
+
+  padding: 25px 0;
+
+  transition: color 0.25s ease;
+
+}
+
+
+.header nav a:hover {
+
+  color: var(--green);
+
+}
+
+
+.header nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 17px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--green);
+
+  transition: width 0.25s ease;
+
+}
+
+
+.header nav a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+========================================================= */
+
+.top-btn {
+
+  background: var(--green);
+
+  color: var(--white);
+
+  padding: 12px 18px;
+
+  border-radius: 25px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.top-btn:hover {
+
+  transform: translateY(-2px);
+
+  background: var(--dark-green);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn {
+
+  display: none;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--green);
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+}
+
+
+/* =========================================================
+   4. HERO SECTION
+========================================================= */
+
+.hero {
+
+  min-height: 475px;
+
+  display: grid;
+
+  grid-template-columns: 44% 56%;
+
+  background: var(--dark-green);
+
+  color: var(--white);
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-copy {
+
+  padding: 55px 7% 45px 15%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.tag {
+
+  display: inline-block;
+
+  width: max-content;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 20px;
+
+  padding: 4px 11px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.8px;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+
+}
+
+
+.hero h1 {
+
+  font-size: 53px;
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+
+  margin: 4px 0 20px;
+
+}
+
+
+.hero h1 i {
+
+  font-family: "Playfair Display", serif;
+
+  color: var(--gold);
+
+  font-weight: 600;
+
+}
+
+
+.hero p {
+
+  max-width: 450px;
+
+  color: #e5eeeb;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.actions {
+
+  display: flex;
+
+  gap: 12px;
+
+  margin: 15px 0 20px;
+
+}
+
+
+.btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 13px 20px;
+
+  border-radius: 26px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.btn:hover {
+
+  transform: translateY(-2px);
+
+}
+
+
+.btn.green {
+
+  background: #16b67e;
+
+  color: var(--white);
+
+}
+
+
+.btn.green:hover {
+
+  background: #0fa36f;
+
+  box-shadow: 0 8px 20px rgba(22, 182, 126, 0.25);
+
+}
+
+
+.btn.outline {
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  color: var(--white);
+
+  background: transparent;
+
+}
+
+
+.btn.outline:hover {
+
+  background: rgba(255, 255, 255, 0.08);
+
+}
+
+
+.btn.white {
+
+  background: var(--white);
+
+  color: var(--dark-green);
+
+}
+
+
+.btn.white:hover {
+
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+
+}
+
+
+/* =========================================================
+   TRUST ROW
+========================================================= */
+
+.trust {
+
+  display: flex;
+
+  gap: 18px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  color: #dce8e4;
+
+}
+
+
+.trust span + span {
+
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+
+  padding-left: 18px;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-photo {
+
+  min-height: 475px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(3, 61, 55, 0.72),
+      rgba(3, 61, 55, 0) 55%
+    ),
+
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=85");
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+/* =========================================================
+   5. GENERAL SECTION
+========================================================= */
+
+.section {
+
+  padding: 65px 7%;
+
+}
+
+
+.section-head {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 25px;
+
+}
+
+
+.section h2,
+.why h2,
+.about h2,
+.contact h2 {
+
+  font-size: 38px;
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+
+  margin: 0 0 10px;
+
+}
+
+
+.section-head p {
+
+  max-width: 440px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+}
+
+
+.mini {
+
+  display: inline-block;
+
+  width: max-content;
+
+  background: var(--light-green);
+
+  color: var(--green);
+
+  border-radius: 20px;
+
+  padding: 4px 11px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.8px;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+
+}
+
+
+.all-link {
+
+  font-size: 12px;
+
+  color: var(--green);
+
+  font-weight: 700;
+
+  transition: transform 0.2s ease;
+
+}
+
+
+.all-link:hover {
+
+  transform: translateX(3px);
+
+}
+
+
+/* =========================================================
+   6. SERVICE CARDS
+========================================================= */
+
+.cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+}
+
+
+.card {
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  background: var(--white);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(9, 45, 40, 0.12);
+
+}
+
+
+/* =========================================================
+   SERVICE IMAGES
+========================================================= */
+
+.photo {
+
+  height: 130px;
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+.photo.home {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1583845112203-454c7d9f3e32?auto=format&fit=crop&w=900&q=80");
+
+}
+
+
+.photo.building {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80");
+
+}
+
+
+.photo.car {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80");
+
+}
+
+
+.photo.deep {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1581579186983-6a7a1f5a5c7a?auto=format&fit=crop&w=900&q=80");
+
+}
+
+
+.photo.chores {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=80");
+
+}
+
+
+.photo.custom {
+
+  background-image:
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80");
+
+}
+
+
+/* =========================================================
+   SERVICE CARD CONTENT
+========================================================= */
+
+.card-content {
+
+  padding: 0 18px 18px;
+
+}
+
+
+.icon {
+
+  width: 40px;
+
+  height: 40px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--light-green);
+
+  color: var(--green);
+
+  font-size: 20px;
+
+  margin-top: -20px;
+
+  margin-bottom: 10px;
+
+  position: relative;
+
+}
+
+
+.card h3 {
+
+  font-size: 16px;
+
+  margin: 0 0 5px;
+
+}
+
+
+.card p {
+
+  font-size: 12px;
+
+  color: var(--muted);
+
+  min-height: 38px;
+
+  margin-bottom: 12px;
+
+}
+
+
+.card a {
+
+  font-size: 11px;
+
+  color: var(--green);
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================================
+   7. WHY CHOOSE US
+========================================================= */
+
+.why {
+
+  padding: 55px 7%;
+
+  display: grid;
+
+  grid-template-columns: 30% 70%;
+
+  gap: 35px;
+
+  background: #eff9f5;
+
+}
+
+
+.why > div > p {
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+}
+
+
+.why-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+}
+
+
+.why-grid > div {
+
+  padding: 0 16px;
+
+  border-left: 1px solid #cbded8;
+
+}
+
+
+.why-grid strong {
+
+  font-size: 24px;
+
+  color: var(--green);
+
+}
+
+
+.why-grid h4 {
+
+  font-size: 11px;
+
+  margin: 8px 0 3px;
+
+}
+
+
+.why-grid p {
+
+  font-size: 9px;
+
+  color: var(--muted);
+
+}
+
+
+/* =========================================================
+   8. ABOUT SECTION
+========================================================= */
+
+.about {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 55px;
+
+  align-items: center;
+
+}
+
+
+.about-photo {
+
+  height: 310px;
+
+  border-radius: 12px;
+
+  background-image:
+
+    url("https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1200&q=85");
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+.about p {
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+}
+
+
+/* =========================================================
+   CHECK LIST
+========================================================= */
+
+.checks {
+
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  margin: 20px 0;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: var(--green);
+
+}
+
+
+/* =========================================================
+   9. BOOKING BANNER
+========================================================= */
+
+.booking {
+
+  margin: 0 7% 55px;
+
+  padding: 22px 35px;
+
+  border-radius: 12px;
+
+  background: var(--dark-green);
+
+  color: var(--white);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+.booking h2 {
+
+  font-size: 23px;
+
+  margin: 0 0 2px;
+
+}
+
+
+.booking p {
+
+  margin: 0;
+
+  color: #c5d8d4;
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================================
+   10. CONTACT / BOOKING FORM
+========================================================= */
+
+.contact {
+
+  background: var(--light-bg);
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+}
+
+
+.contact p {
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+}
+
+
+.contact-whatsapp {
+
+  margin-top: 25px;
+
+  color: var(--green) !important;
+
+}
+
+
+.contact form {
+
+  display: grid;
+
+  gap: 12px;
+
+}
+
+
+.contact input,
+.contact select,
+.contact textarea {
+
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: var(--white);
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition: border 0.2s ease,
+              box-shadow 0.2s ease;
+
+}
+
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus {
+
+  border-color: var(--green);
+
+  box-shadow:
+    0 0 0 3px rgba(7, 91, 79, 0.08);
+
+}
+
+
+.contact textarea {
+
+  resize: vertical;
+
+}
+
+
+/* =========================================================
+   11. FOOTER
+========================================================= */
+
+footer {
+
+  background: #031e1b;
+
+  color: var(--white);
+
+  padding: 35px 7% 20px;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr 1fr;
+
+  gap: 25px;
+
+  align-items: center;
+
+}
+
+
+.footer-logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+
+.footer-logo b {
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+}
+
+
+.footer-logo small {
+
+  display: block;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #9eb5af;
+
+  font-weight: 700;
+
+}
+
+
+.footer-nav {
+
+  display: flex;
+
+  gap: 18px;
+
+  font-size: 10px;
+
+}
+
+
+.footer-nav a:hover {
+
+  color: var(--gold);
+
+}
+
+
+.social {
+
+  text-align: right;
+
+  font-size: 10px;
+
+  color: #d0dfdb;
+
+}
+
+
+.social a:hover {
+
+  color: var(--gold);
+
+}
+
+
+footer > p {
+
+  grid-column: 1 / -1;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+  padding-top: 15px;
+
+  margin: 0;
+
+  color: #91a9a4;
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================================
+   12. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .header {
+
+    padding: 0 5%;
+
+  }
+
+
+  .header nav {
+
+    gap: 18px;
+
+  }
+
+
+  .hero-copy {
+
+    padding-left: 8%;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 45px;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .why {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .why-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+  }
+
+
+  .why-grid > div {
+
+    border-left: none;
+
+  }
+
+
+  footer {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+
+  .social {
+
+    text-align: left;
+
+  }
+
+}
+
+
+/* =========================================================
+   13. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .header {
+
+    height: 65px;
+
+    padding: 0 5%;
+
+  }
+
+
+  .logo b {
+
+    font-size: 20px;
+
+  }
+
+
+  .logo-mark {
+
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 26px;
+
+  }
+
+
+  .top-btn {
+
+    display: none;
+
+  }
+
+
+  .menu-btn {
+
+    display: block;
+
+  }
+
+
+  .header nav {
+
+    display: none;
+
+    position: absolute;
+
+    top: 65px;
+
+    left: 0;
+
+    right: 0;
+
+    background: var(--white);
+
+    padding: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.08);
+
+  }
+
+
+  .header nav.open {
+
+    display: flex;
+
+  }
+
+
+  .header nav a {
+
+    width: 100%;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #edf1ef;
+
+  }
+
+
+  .header nav a::after {
+
+    display: none;
+
+  }
+
+
+  /* HERO */
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+  }
+
+
+  .hero-copy {
+
+    padding: 50px 7% 45px;
+
+    min-height: 410px;
+
+  }
+
+
+  .hero h1 {
+
+    font-size: 42px;
+
+  }
+
+
+  .hero p {
+
+    font-size: 13px;
+
+  }
+
+
+  .hero-photo {
+
+    min-height: 280px;
+
+  }
+
+
+  .actions {
+
+    flex-wrap: wrap;
+
+  }
+
+
+  .trust {
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+  }
+
+
+  .trust span + span {
+
+    padding-left: 12px;
+
+  }
+
+
+  /* GENERAL SECTIONS */
+
+  .section {
+
+    padding: 50px 6%;
+
+  }
+
+
+  .section h2,
+  .why h2,
+  .about h2,
+  .contact h2 {
+
+    font-size: 32px;
+
+  }
+
+
+  .section-head {
+
+    display: block;
+
+  }
+
+
+  .all-link {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+  }
+
+
+  /* SERVICE CARDS */
+
+  .cards {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  /* WHY */
+
+  .why {
+
+    padding: 45px 6%;
+
+  }
+
+
+  .why-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+  }
+
+
+  /* ABOUT */
+
+  .about {
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+  }
+
+
+  .about-photo {
+
+    height: 260px;
+
+  }
+
+
+  /* BOOKING */
+
+  .booking {
+
+    margin: 0 6% 45px;
+
+    padding: 25px;
+
+    display: block;
+
+  }
+
+
+  .booking .btn {
+
+    margin-top: 15px;
+
+  }
+
+
+  /* CONTACT */
+
+  .contact {
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+  }
+
+
+  /* FOOTER */
+
+  footer {
+
+    grid-template-columns: 1fr;
+
+    padding: 30px 6%;
+
+  }
+
+
+  .footer-nav {
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+  }
+
+
+  .social {
+
+    text-align: left;
+
+  }
+
+}
+
+
+/* =========================================================
+   14. SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+
+    font-size: 37px;
+
+  }
+
+
+  .btn {
+
+    width: 100%;
+
+  }
+
+
+  .actions {
+
+    flex-direction: column;
+
+  }
+
+
+  .why-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+
+  .checks {
+
+    flex-direction: column;
+
+    gap: 8px;
+
+  }
+
+}
+
+
+/* =========================================================
+   15. ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+.hero-copy > * {
+
+  animation: fadeUp 0.7s ease both;
+
+}
+
+
+.hero-copy .tag {
+
+  animation-delay: 0.05s;
+
+}
+
+
+.hero-copy h1 {
+
+  animation-delay: 0.12s;
+
+}
+
+
+.hero-copy p {
+
+  animation-delay: 0.2s;
+
+}
+
+
+.hero-copy .actions {
+
+  animation-delay: 0.28s;
+
+}
+
+
+.hero-copy .trust {
+
+  animation-delay: 0.36s;
+
+}
