@@ -1,360 +1,204 @@
-/* =========================================================
-   YARIEL SCOTT
-   CLEANING & HOME SERVICES
-   Main Website JavaScript
-========================================================= */
 
+"use strict";
 
-/* =========================================================
-   1. WHATSAPP NUMBER
-========================================================= */
+/* Yariel Scott — site interactions */
 
 const WHATSAPP_NUMBER = "2250554327726";
 
-
-/* =========================================================
-   2. MOBILE NAVIGATION
-========================================================= */
-
+/* Mobile navigation */
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
-if (menuBtn && nav) {
+function closeMobileMenu() {
+  if (!menuBtn || !nav) return;
 
-  menuBtn.addEventListener("click", () => {
-
-    nav.classList.toggle("open");
-
-    if (nav.classList.contains("open")) {
-
-      menuBtn.textContent = "✕";
-
-    } else {
-
-      menuBtn.textContent = "☰";
-
-    }
-
-  });
-
-
-  /* Close menu after clicking a link */
-
-  const navLinks = nav.querySelectorAll("a");
-
-  navLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      nav.classList.remove("open");
-
-      menuBtn.textContent = "☰";
-
-    });
-
-  });
-
+  nav.classList.remove("open");
+  menuBtn.textContent = "☰";
+  menuBtn.setAttribute("aria-expanded", "false");
+  menuBtn.setAttribute("aria-label", "Ouvrir le menu");
 }
 
+if (menuBtn && nav) {
+  menuBtn.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
 
-/* =========================================================
-   3. BOOKING FORM → WHATSAPP
-========================================================= */
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.setAttribute(
+      "aria-label",
+      isOpen ? "Fermer le menu" : "Ouvrir le menu"
+    );
+  });
 
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMobileMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeMobileMenu();
+  });
+}
+
+/* Booking form: prepare a French-language WhatsApp message */
 const bookingForm = document.getElementById("bookingForm");
+const formStatus = document.getElementById("formStatus");
 
 if (bookingForm) {
-
-  bookingForm.addEventListener("submit", function (event) {
-
+  bookingForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    const getValue = (fieldName) => {
+      const field = bookingForm.querySelector(`[name="${fieldName}"]`);
+      return field ? field.value.trim() : "";
+    };
 
-    /* Get form values */
-
-    const name =
-      bookingForm.querySelector('[name="name"]').value.trim();
-
-    const phone =
-      bookingForm.querySelector('[name="phone"]').value.trim();
-
-    const service =
-      bookingForm.querySelector('[name="service"]').value;
-
-    const details =
-      bookingForm.querySelector('[name="details"]').value.trim();
-
-
-    /* Validate */
+    const name = getValue("name");
+    const phone = getValue("phone");
+    const service = getValue("service");
+    const location = getValue("location");
+    const appointmentDate = getValue("appointmentDate");
+    const appointmentTime = getValue("appointmentTime");
+    const details = getValue("details");
 
     if (!name || !phone || !service) {
-
-      alert(
-        "Please fill in your name, phone number and service."
-      );
-
+      if (formStatus) {
+        formStatus.textContent =
+          "Veuillez renseigner votre nom, votre téléphone et le service souhaité.";
+      }
       return;
-
     }
 
-
-    /* Create WhatsApp message */
-
-    const message =
-      `Hello Yariel Scott,
-
-I would like to request a service.
-
-Name: ${name}
-
-Phone / WhatsApp: ${phone}
-
-Service: ${service}
-
-Details:
-${details || "No additional details provided."}
-
-Thank you.`;
-
-
-    /* Encode message for WhatsApp */
+    const message = [
+      "Bonjour Yariel Scott,",
+      "",
+      "Je souhaite demander un devis ou un rendez-vous.",
+      "",
+      `Nom : ${name}`,
+      `Téléphone : ${phone}`,
+      `Service souhaité : ${service}`,
+      `Lieu de l'intervention : ${location || "À préciser"}`,
+      `Date souhaitée : ${appointmentDate || "À convenir"}`,
+      `Moment souhaité : ${appointmentTime || "À convenir"}`,
+      "",
+      "Détails de la demande :",
+      details || "Aucun détail supplémentaire fourni.",
+      "",
+      "Merci de me confirmer vos disponibilités et le tarif."
+    ].join("\n");
 
     const whatsappURL =
       `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
+    if (formStatus) {
+      formStatus.textContent =
+        "WhatsApp va s'ouvrir. Vérifiez votre message puis envoyez-le pour confirmer votre demande.";
+    }
 
-    /* Open WhatsApp */
-
-    window.open(
+    const whatsappWindow = window.open(
       whatsappURL,
       "_blank",
       "noopener,noreferrer"
     );
 
+    /* Fallback in case the browser blocks opening a new tab */
+    if (!whatsappWindow) {
+      window.location.href = whatsappURL;
+    }
   });
-
 }
 
-
-/* =========================================================
-   4. CURRENT YEAR
-========================================================= */
-
-const yearElement =
-  document.getElementById("year");
+/* Current year */
+const yearElement = document.getElementById("year");
 
 if (yearElement) {
-
-  yearElement.textContent =
-    new Date().getFullYear();
-
+  yearElement.textContent = new Date().getFullYear();
 }
 
+/* Smooth scrolling for internal page links */
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetID = link.getAttribute("href");
 
-/* =========================================================
-   5. SMOOTH SCROLLING
-========================================================= */
+    if (!targetID || targetID === "#") return;
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-  link.addEventListener("click", function (event) {
-
-    const targetID =
-      this.getAttribute("href");
-
-    if (
-      !targetID ||
-      targetID === "#"
-    ) {
-
-      return;
-
-    }
-
-
-    const target =
-      document.querySelector(targetID);
+    const target = document.getElementById(targetID.slice(1));
 
     if (target) {
-
       event.preventDefault();
-
       target.scrollIntoView({
-
-        behavior: "smooth",
-
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
         block: "start"
-
       });
-
     }
-
   });
-
 });
 
+/* Keep service cards informational; their links handle service requests. */
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a, button, input, select, textarea")) return;
 
-/* =========================================================
-   6. SERVICE CARD INTERACTION
-========================================================= */
+    const serviceLink = card.querySelector(".card-content > a");
 
-const serviceCards =
-  document.querySelectorAll(".card");
-
-
-serviceCards.forEach(card => {
-
-  card.addEventListener("click", function (event) {
-
-    /*
-      Don't interfere with an actual link click.
-    */
-
-    if (
-      event.target.tagName.toLowerCase() === "a"
-    ) {
-
-      return;
-
+    if (serviceLink) {
+      serviceLink.click();
     }
-
-
-    const serviceName =
-      card.querySelector("h3")?.textContent.trim();
-
-
-    if (!serviceName) {
-
-      return;
-
-    }
-
-
-    const message =
-      `Hello Yariel Scott,
-
-I am interested in your ${serviceName} service.
-
-Please let me know the available options and pricing.`;
-
-
-    const whatsappURL =
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-
-
-    window.open(
-      whatsappURL,
-      "_blank",
-      "noopener,noreferrer"
-    );
-
   });
-
 });
 
+/* Subtle reveal animation, respecting reduced-motion settings */
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
-/* =========================================================
-   7. SCROLL REVEAL ANIMATION
-========================================================= */
-
-const revealElements = document.querySelectorAll(
-  ".card, .why-grid > div, .about, .booking, .contact"
-);
-
-
-const revealObserver =
-  new IntersectionObserver(
-
-    entries => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-          revealObserver.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-
-    {
-
-      threshold: 0.12
-
-    }
-
+if ("IntersectionObserver" in window && !reduceMotion) {
+  const revealElements = document.querySelectorAll(
+    ".card, .why-grid > div, .about, .booking, .contact"
   );
 
+  const revealStyle = document.createElement("style");
+  revealStyle.textContent = `
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  `;
+  document.head.appendChild(revealStyle);
 
-revealElements.forEach(element => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-  element.classList.add("reveal");
-
-  revealObserver.observe(element);
-
-});
-
-
-/* =========================================================
-   8. ADD REVEAL STYLES
-========================================================= */
-
-const revealStyle =
-  document.createElement("style");
-
-
-revealStyle.textContent = `
-
-  .reveal {
-
-    opacity: 0;
-
-    transform: translateY(25px);
-
-    transition:
-      opacity 0.7s ease,
-      transform 0.7s ease;
-
-  }
-
-
-  .reveal.visible {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
-  }
-
-`;
-
-
-document.head.appendChild(revealStyle);
-
-
-/* =========================================================
-   9. PROTECT AGAINST EMPTY LINKS
-========================================================= */
-
-document.querySelectorAll('a[href="#"]').forEach(link => {
-
-  link.addEventListener("click", event => {
-
-    event.preventDefault();
-
+  revealElements.forEach((element) => {
+    element.classList.add("reveal");
+    observer.observe(element);
   });
+}
 
-});
-
-
-/* =========================================================
-   10. CONSOLE MESSAGE
-========================================================= */
-
-console.log(
-  "Yariel Scott Cleaning & Home Services website loaded successfully."
-);
+console.log("Yariel Scott — site scripts loaded.");
