@@ -1,809 +1,402 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head
+<html lang="fr">
+<head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yariel Scott propose des services de nettoyage automobile, de maisons, de tissus, de piscines, d'espaces extérieurs et de locaux professionnels. Demandez un devis par WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#123d32">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yariel Scott | Services de nettoyage">
+  <meta property="og:description" content="Des solutions de nettoyage pour les véhicules, les maisons, les piscines et les locaux professionnels. Contactez-nous pour un devis.">
+  <title>Yariel Scott | Services de nettoyage professionnel</title>
 
-  <meta
-    name="description"
-    content="Yariel Scott Cleaning & Home Services — professional cleaning, building care, mobile car wash and home services."
-  >
-
-  <title>Yariel Scott | Cleaning & Home Services</title>
-
-  <!-- Google Fonts -->
+  <link rel="canonical" href="https://cathyverdin72-bot.github.io/YarielScott/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- Main stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CleaningService",
+    "name": "Yariel Scott",
+    "description": "Services de nettoyage automobile, résidentiel, textile, de piscines, d'espaces extérieurs et de locaux professionnels.",
+    "url": "https://cathyverdin72-bot.github.io/YarielScott/",
+    "telephone": "+2250554327726",
+    "availableLanguage": ["fr"]
+  }
+  </script>
 </head>
 
 <body>
-
-  <!-- =========================
-       HEADER
-  ========================== -->
   <header class="header">
-
-    <!-- BRAND / LOGO -->
-    <a href="#home" class="logo">
-
-      <span class="logo-mark">
-        ⌂
-      </span>
-
+    <a href="#home" class="logo" aria-label="Yariel Scott, accueil">
+      <span class="logo-mark" aria-hidden="true">⌂</span>
       <span class="logo-text">
         <b>Yariel Scott</b>
-        <small>CLEANING & HOME SERVICES</small>
+        <small>SERVICES DE NETTOYAGE</small>
       </span>
-
     </a>
 
-
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Open navigation menu"
-    >
+    <button class="menu-btn" id="menuBtn" type="button"
+      aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false">
       ☰
     </button>
 
-
-    <!-- NAVIGATION -->
-    <nav id="nav">
-
-      <a href="#home">Home</a>
-
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="#home">Accueil</a>
       <a href="#services">Services</a>
-
-      <a href="#about">About</a>
-
-      <a href="#gallery">Gallery</a>
-
+      <a href="#gallery">Galerie</a>
+      <a href="#about">À propos</a>
+      <a href="#reviews">Avis</a>
       <a href="#contact">Contact</a>
-
     </nav>
 
-
-    <!-- HEADER BOOK BUTTON -->
-    <a
-      class="top-btn"
-      href="https://wa.me/2250554327726?text=Hello%20Yariel%20Scott%2C%20I%20would%20like%20to%20book%20a%20service."
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      ◔ Book a Service
+    <a class="top-btn" href="https://wa.me/2250554327726?text=Bonjour%20Yariel%20Scott%2C%20je%20souhaite%20demander%20un%20devis."
+      target="_blank" rel="noopener noreferrer">
+      WhatsApp · Demander un devis
     </a>
-
   </header>
 
-
-
   <main>
-
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
-
     <section class="hero" id="home">
-
-      <!-- LEFT SIDE -->
       <div class="hero-copy">
-
-        <span class="tag">
-          PROFESSIONAL CLEANING & HOME SERVICES
-        </span>
-
-
-        <h1>
-          We Clean.<br>
-          We Care.<br>
-          <i>You Relax.</i>
-        </h1>
-
-
+        <span class="tag">PROPRETÉ · ENTRETIEN · SERVICE</span>
+        <h1>Un espace propre.<br>Un esprit tranquille.<br><i>Un service adapté.</i></h1>
         <p>
-          Professional cleaning, building care, car washing
-          and everyday home services — brought directly to you.
+          Des solutions de nettoyage pour votre véhicule, votre maison,
+          vos textiles, votre piscine et vos espaces professionnels.
+          Contactez-nous pour discuter de vos besoins.
         </p>
 
-
-        <!-- HERO BUTTONS -->
         <div class="actions">
-
-          <a
-            class="btn green"
-            href="#booking"
-          >
-            Book a Service
-            <b>→</b>
-          </a>
-
-
-          <a
-            class="btn outline"
-            href="https://wa.me/2250554327726?text=Hello%20Yariel%20Scott%2C%20I%20would%20like%20to%20ask%20about%20your%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ◔ Chat on WhatsApp
-          </a>
-
+          <a class="btn green" href="#booking">Demander un devis <b>→</b></a>
+          <a class="btn outline" href="https://wa.me/2250554327726?text=Bonjour%20Yariel%20Scott%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services."
+            target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
         </div>
 
-
-        <!-- TRUST FEATURES -->
         <div class="trust">
-
-          <span>
-            ✓ Trusted & Reliable
-          </span>
-
-          <span>
-            ◷ Flexible Scheduling
-          </span>
-
-          <span>
-            ⌖ We Come To You
-          </span>
-
+          <span>✓ Demande personnalisée</span>
+          <span>◷ Rendez-vous à convenir</span>
+          <span>⌖ Zone à confirmer</span>
         </div>
-
       </div>
-
-
-      <!-- HERO IMAGE -->
-      <div class="hero-photo"></div>
-
+      <div class="hero-photo" role="img" aria-label="Illustration des services de nettoyage"></div>
     </section>
 
-
-
-    <!-- =========================
-         SERVICES
-    ========================== -->
-
-    <section
-      class="section"
-      id="services"
-    >
-
+    <section class="section" id="services">
       <div class="section-head">
-
         <div>
-
-          <span class="mini">
-            OUR SERVICES
-          </span>
-
-          <h2>
-            What We Do
-          </h2>
-
-          <p>
-            From your home to your car, we handle the dirty work
-            so you can focus on what matters most.
-          </p>
-
+          <span class="mini">NOS PRESTATIONS</span>
+          <h2>Nos services de nettoyage</h2>
+          <p>Choisissez le service adapté à votre espace et à vos besoins.</p>
         </div>
-
-
-        <a
-          class="all-link"
-          href="#booking"
-        >
-          View All Services →
-        </a>
-
+        <a class="all-link" href="#booking">Demander un devis →</a>
       </div>
 
-
-
-      <!-- SERVICE CARDS -->
       <div class="cards">
-
-
-        <!-- HOME CLEANING -->
         <article class="card">
-
-          <div class="photo home"></div>
-
+          <div class="photo car" role="img" aria-label="Illustration du nettoyage automobile"></div>
           <div class="card-content">
-
-            <span class="icon">
-              ⌂
-            </span>
-
-            <h3>
-              Home Cleaning
-            </h3>
-
-            <p>
-              Apartments, houses, kitchens,
-              bathrooms and general cleaning.
-            </p>
-
-            <a href="#booking">
-              Learn More →
-            </a>
-
+            <span class="icon" aria-hidden="true">▱</span>
+            <h3>Nettoyage automobile</h3>
+            <p>Lavage intérieur et extérieur, aspiration des sièges et tapis, nettoyage des vitres, jantes, pneus et coffre. Pour berlines, SUV et 4×4.</p>
+            <a href="#booking">Demander ce service →</a>
           </div>
-
         </article>
 
-
-
-        <!-- BUILDING CLEANING -->
         <article class="card">
-
-          <div class="photo building"></div>
-
+          <div class="photo home" role="img" aria-label="Illustration du nettoyage résidentiel"></div>
           <div class="card-content">
-
-            <span class="icon">
-              ▦
-            </span>
-
-            <h3>
-              Building Cleaning
-            </h3>
-
-            <p>
-              Old buildings, newly constructed buildings,
-              move-in/move-out cleaning and deep cleaning.
-            </p>
-
-            <a href="#booking">
-              Learn More →
-            </a>
-
+            <span class="icon" aria-hidden="true">⌂</span>
+            <h3>Maisons et appartements</h3>
+            <p>Nettoyage des chambres, salons, cuisines, salles de bain, toilettes, sols et vitres. Grand ménage et nettoyage après déménagement ou travaux.</p>
+            <a href="#booking">Demander ce service →</a>
           </div>
-
         </article>
 
-
-
-        <!-- MOBILE CAR WASH -->
         <article class="card">
-
-          <div class="photo car"></div>
-
+          <div class="photo deep" role="img" aria-label="Illustration du nettoyage des tissus"></div>
           <div class="card-content">
-
-            <span class="icon">
-              ▱
-            </span>
-
-            <h3>
-              Mobile Car Wash
-            </h3>
-
-            <p>
-              We come to your home, office or location
-              and wash your car.
-            </p>
-
-            <a href="#booking">
-              Learn More →
-            </a>
-
+            <span class="icon" aria-hidden="true">✦</span>
+            <h3>Fauteuils et tissus</h3>
+            <p>Nettoyage de canapés, fauteuils, matelas, tapis, moquettes et sièges de voiture en tissu, selon le matériau et la méthode adaptée.</p>
+            <a href="#booking">Demander ce service →</a>
           </div>
-
         </article>
 
-
-
-        <!-- DEEP CLEANING -->
         <article class="card">
-
-          <div class="photo deep"></div>
-
+          <div class="photo pool" role="img" aria-label="Illustration de l'entretien d'une piscine"></div>
           <div class="card-content">
-
-            <span class="icon">
-              ✦
-            </span>
-
-            <h3>
-              Deep Cleaning
-            </h3>
-
-            <p>
-              Heavy-duty cleaning for spaces
-              that need extra attention.
-            </p>
-
-            <a href="#booking">
-              Learn More →
-            </a>
-
+            <span class="icon" aria-hidden="true">≈</span>
+            <h3>Piscines</h3>
+            <p>Nettoyage du fond et des parois, retrait des feuilles et déchets, entretien des abords et possibilité d'un entretien régulier à convenir.</p>
+            <a href="#booking">Demander ce service →</a>
           </div>
-
         </article>
 
-
-
-        <!-- HOME CHORES -->
         <article class="card">
-
-          <div class="photo chores"></div>
-
+          <div class="photo outdoor" role="img" aria-label="Illustration du nettoyage extérieur"></div>
           <div class="card-content">
-
-            <span class="icon">
-              ♧
-            </span>
-
-            <h3>
-              Home Chores
-            </h3>
-
-            <p>
-              Small household tasks and assistance
-              when you need an extra pair of hands.
-            </p>
-
-            <a href="#booking">
-              Learn More →
-            </a>
-
+            <span class="icon" aria-hidden="true">⌖</span>
+            <h3>Espaces extérieurs</h3>
+            <p>Nettoyage de cours, terrasses, balcons, garages, escaliers et allées. Nettoyage à haute pression lorsque la surface le permet.</p>
+            <a href="#booking">Demander ce service →</a>
           </div>
-
         </article>
 
-
-
-        <!-- CUSTOM SERVICES -->
         <article class="card">
-
-          <div class="photo custom"></div>
-
+          <div class="photo building" role="img" aria-label="Illustration du nettoyage professionnel"></div>
           <div class="card-content">
-
-            <span class="icon">
-              ＋
-            </span>
-
-            <h3>
-              Custom Services
-            </h3>
-
-            <p>
-              Need something else?
-              Tell us what you need.
-            </p>
-
-            <a href="#booking">
-              Learn More →
-            </a>
-
+            <span class="icon" aria-hidden="true">▦</span>
+            <h3>Locaux professionnels</h3>
+            <p>Nettoyage de bureaux, commerces et locaux professionnels. Possibilité d'organiser des prestations ponctuelles ou régulières.</p>
+            <a href="#booking">Demander ce service →</a>
           </div>
-
         </article>
-
       </div>
-
     </section>
-
-
-
-    <!-- =========================
-         WHY CHOOSE US
-    ========================== -->
 
     <section class="why">
-
       <div>
-
-        <span class="mini">
-          WHY CHOOSE US
-        </span>
-
-        <h2>
-          Your Trusted<br>
-          Service Partner
-        </h2>
-
+        <span class="mini">NOTRE APPROCHE</span>
+        <h2>Un service adapté à vos besoins</h2>
         <p>
-          We're committed to delivering high-quality,
-          reliable and convenient services that make
-          your life easier.
+          Chaque espace et chaque matériau nécessitent une attention particulière.
+          Décrivez-nous votre besoin pour discuter de la prestation, du tarif
+          et des disponibilités.
         </p>
-
       </div>
-
 
       <div class="why-grid">
-
-
         <div>
-
           <strong>⌖</strong>
-
-          <h4>
-            We come to you
-          </h4>
-
-          <p>
-            No stress, no extra travel.
-          </p>
-
+          <h4>Organisation pratique</h4>
+          <p>Le lieu d'intervention est confirmé avant le rendez-vous.</p>
         </div>
-
-
         <div>
-
-          <strong>♢</strong>
-
-          <h4>
-            Professional service
-          </h4>
-
-          <p>
-            Skilled, trained and dependable.
-          </p>
-
+          <strong>✦</strong>
+          <h4>Besoin précis</h4>
+          <p>Expliquez le type de nettoyage souhaité.</p>
         </div>
-
-
         <div>
-
-          <strong>▣</strong>
-
-          <h4>
-            Flexible bookings
-          </h4>
-
-          <p>
-            Book a time that works for you.
-          </p>
-
+          <strong>◷</strong>
+          <h4>Rendez-vous</h4>
+          <p>La date et l'heure sont à confirmer avec l'équipe.</p>
         </div>
-
-
         <div>
-
           <strong>▦</strong>
-
-          <h4>
-            Residential & Commercial
-          </h4>
-
-          <p>
-            Homes, offices, properties and more.
-          </p>
-
+          <h4>Plusieurs types d'espaces</h4>
+          <p>Prestations pour particuliers et professionnels.</p>
         </div>
-
-
-        <div>
-
-          <strong>★</strong>
-
-          <h4>
-            Multiple services
-          </h4>
-
-          <p>
-            Save time. Get more done.
-          </p>
-
-        </div>
-
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section
-      class="about section"
-      id="about"
-    >
-
-      <div
-        class="about-photo"
-        id="gallery"
-      ></div>
-
-
+    <section class="about section" id="about">
+      <div class="about-photo" role="img" aria-label="Illustration des services de nettoyage"></div>
       <div>
-
-        <span class="mini">
-          ABOUT US
-        </span>
-
-        <h2>
-          More Than Just Cleaning
-        </h2>
-
+        <span class="mini">À PROPOS</span>
+        <h2>Yariel Scott, à votre écoute</h2>
         <p>
-          Yariel Scott is a cleaning and home services brand
-          dedicated to making your space cleaner, safer and
-          more comfortable.
-
-          Whether it's your apartment, building, car or
-          everyday household tasks, we bring reliable,
-          high-quality service right to you.
+          Yariel Scott propose différentes prestations de nettoyage et
+          d'entretien pour les véhicules, les logements, les textiles,
+          les piscines et les espaces professionnels.
         </p>
-
-
+        <p>
+          Contactez-nous pour décrire votre espace, préciser le type de
+          nettoyage souhaité et vérifier la disponibilité du service dans
+          votre secteur.
+        </p>
         <div class="checks">
-
-          <span>
-            ✓ Quality Service
-          </span>
-
-          <span>
-            ✓ Customer Satisfaction
-          </span>
-
-          <span>
-            ✓ Affordable Rates
-          </span>
-
+          <span>✓ Demande de devis</span>
+          <span>✓ Contact direct</span>
+          <span>✓ Prestations à confirmer</span>
         </div>
-
-
-        <a
-          class="btn green"
-          href="https://wa.me/2250554327726?text=Hello%20Yariel%20Scott%2C%20I%20would%20like%20to%20contact%20you%20about%20your%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contact Us / WhatsApp →
-        </a>
-
+        <a class="btn green" href="https://wa.me/2250554327726?text=Bonjour%20Yariel%20Scott%2C%20je%20souhaite%20discuter%20de%20vos%20services."
+          target="_blank" rel="noopener noreferrer">Nous contacter sur WhatsApp →</a>
       </div>
-
     </section>
 
-
-
-    <!-- =========================
-         BOOKING BANNER
-    ========================== -->
-
-    <section
-      class="booking"
-      id="booking"
-    >
-
-      <div>
-
-        <h2>
-          Need Help at Home?
-        </h2>
-
-        <p>
-          Tell us what you need and we'll see
-          how we can help.
-        </p>
-
+    <section class="section" id="gallery">
+      <div class="section-head">
+        <div>
+          <span class="mini">GALERIE</span>
+          <h2>Photos des prestations</h2>
+          <p>
+            Cette galerie attend des photos authentiques fournies ou approuvées
+            par Yariel Scott. Aucune photo de réalisation n'est présentée ici
+            comme un travail déjà effectué par l'entreprise.
+          </p>
+        </div>
       </div>
 
-
-      <a
-        class="btn white"
-        href="#contact"
-      >
-        Request a Service →
-      </a>
-
+      <div class="cards gallery-grid">
+        <article class="card">
+          <div class="photo car" role="img" aria-label="Emplacement prévu pour une photo réelle de nettoyage automobile"></div>
+          <div class="card-content">
+            <h3>Nettoyage automobile</h3>
+            <p>Photo réelle à ajouter après validation.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo home" role="img" aria-label="Emplacement prévu pour une photo réelle de nettoyage résidentiel"></div>
+          <div class="card-content">
+            <h3>Nettoyage résidentiel</h3>
+            <p>Photo réelle à ajouter après validation.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo building" role="img" aria-label="Emplacement prévu pour une photo réelle de nettoyage professionnel"></div>
+          <div class="card-content">
+            <h3>Nettoyage professionnel</h3>
+            <p>Photo réelle à ajouter après validation.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
+    <section class="section" id="reviews">
+      <div class="section-head">
+        <div>
+          <span class="mini">AVIS CLIENTS</span>
+          <h2>Votre expérience compte</h2>
+          <p>
+            Les avis authentiques seront publiés ici après avoir été recueillis
+            et approuvés. Aucun témoignage ni aucune note n'est inventé.
+          </p>
+        </div>
+      </div>
+      <div class="why">
+        <div>
+          <h3>Vous avez déjà utilisé nos services ?</h3>
+          <p>Contactez-nous pour partager votre retour d'expérience.</p>
+          <a class="btn green" href="https://wa.me/2250554327726?text=Bonjour%20Yariel%20Scott%2C%20je%20souhaite%20partager%20mon%20avis%20sur%20votre%20service."
+            target="_blank" rel="noopener noreferrer">Partager un avis →</a>
+        </div>
+      </div>
+    </section>
 
-
-    <!-- =========================
-         CONTACT / BOOKING FORM
-    ========================== -->
-
-    <section
-      class="contact section"
-      id="contact"
-    >
-
+    <section class="booking" id="booking">
       <div>
+        <h2>Besoin d'un devis ?</h2>
+        <p>Décrivez votre besoin et contactez-nous pour convenir des détails.</p>
+      </div>
+      <a class="btn white" href="#contact">Préparer ma demande →</a>
+    </section>
 
-        <span class="mini">
-          GET IN TOUCH
-        </span>
-
-        <h2>
-          Ready for a cleaner space?
-        </h2>
-
+    <section class="section contact" id="contact">
+      <div>
+        <span class="mini">CONTACT ET RENDEZ-VOUS</span>
+        <h2>Parlons de votre besoin</h2>
         <p>
-          Send a request and Yariel Scott can help
-          you choose the right service.
+          Remplissez le formulaire. Votre demande sera préparée dans WhatsApp
+          afin que vous puissiez la vérifier et l'envoyer.
         </p>
-
 
         <p class="contact-whatsapp">
-
-          <strong>
-            WhatsApp:
-          </strong>
-
-          +225 05 54 32 77 26
-
+          <strong>WhatsApp / Téléphone :</strong><br>
+          <a href="tel:+2250554327726">+225 05 54 32 77 26</a>
         </p>
 
-      </div>
+        <p>
+          <strong>Zone d'intervention :</strong><br>
+          À confirmer avec l'équipe avant la réservation.
+        </p>
 
+        <a class="btn outline" href="https://wa.me/2250554327726"
+          target="_blank" rel="noopener noreferrer">Ouvrir WhatsApp</a>
+      </div>
 
       <form id="bookingForm">
+        <label for="clientName">Nom complet</label>
+        <input id="clientName" type="text" name="name" autocomplete="name"
+          placeholder="Votre nom complet" required>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name"
-          required
-        >
+        <label for="clientPhone">Votre téléphone</label>
+        <input id="clientPhone" type="tel" name="phone" autocomplete="tel"
+          placeholder="Votre numéro de téléphone" required>
 
-
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone / WhatsApp"
-          required
-        >
-
-
-        <select
-          name="service"
-          required
-        >
-
-          <option value="">
-            Select a service
-          </option>
-
-          <option>
-            Home Cleaning
-          </option>
-
-          <option>
-            Building Cleaning
-          </option>
-
-          <option>
-            Mobile Car Wash
-          </option>
-
-          <option>
-            Deep Cleaning
-          </option>
-
-          <option>
-            Home Chores
-          </option>
-
-          <option>
-            Custom Service
-          </option>
-
+        <label for="service">Service souhaité</label>
+        <select id="service" name="service" required>
+          <option value="">Choisir un service</option>
+          <option>Nettoyage automobile</option>
+          <option>Nettoyage de maisons et appartements</option>
+          <option>Nettoyage de fauteuils et tissus</option>
+          <option>Nettoyage et entretien de piscines</option>
+          <option>Nettoyage des espaces extérieurs</option>
+          <option>Nettoyage de locaux professionnels</option>
         </select>
 
+        <label for="location">Lieu de l'intervention</label>
+        <input id="location" type="text" name="location"
+          placeholder="Ville, quartier ou adresse">
 
-        <textarea
-          name="details"
-          rows="4"
-          placeholder="Tell us what you need"
-        ></textarea>
+        <label for="appointmentDate">Date souhaitée</label>
+        <input id="appointmentDate" type="date" name="appointmentDate">
 
+        <label for="appointmentTime">Moment souhaité</label>
+        <select id="appointmentTime" name="appointmentTime">
+          <option value="">À convenir</option>
+          <option>Matin</option>
+          <option>Après-midi</option>
+          <option>Fin de journée</option>
+        </select>
 
-        <button
-          class="btn green"
-          type="submit"
-        >
-          Send Service Request →
-        </button>
+        <label for="details">Détails de la demande</label>
+        <textarea id="details" name="details" rows="4"
+          placeholder="Décrivez la surface, le véhicule ou le nettoyage souhaité."></textarea>
 
+        <button class="btn green" type="submit">Préparer ma demande WhatsApp →</button>
+        <p id="formStatus" role="status" aria-live="polite">
+          Vérifiez votre demande dans WhatsApp avant de l'envoyer.
+        </p>
       </form>
-
     </section>
 
+    <section class="section service-area" id="zones">
+      <span class="mini">ZONE D'INTERVENTION</span>
+      <h2>Vérifiez si nous intervenons chez vous</h2>
+      <p>
+        Les villes et quartiers desservis doivent être confirmés par Yariel Scott.
+        Envoyez votre localisation par WhatsApp avant de réserver.
+      </p>
+      <a class="btn green" href="https://wa.me/2250554327726?text=Bonjour%20Yariel%20Scott%2C%20intervenez-vous%20dans%20mon%20quartier%20%3F"
+        target="_blank" rel="noopener noreferrer">Vérifier ma zone →</a>
+    </section>
   </main>
 
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
-
     <div class="footer-logo">
-
-      <span class="logo-mark">
-        ⌂
-      </span>
-
+      <span class="logo-mark" aria-hidden="true">⌂</span>
       <div>
-
-        <b>
-          Yariel Scott
-        </b>
-
-        <small>
-          CLEANING & HOME SERVICES
-        </small>
-
+        <b>Yariel Scott</b>
+        <small>SERVICES DE NETTOYAGE</small>
       </div>
-
     </div>
-
 
     <div class="footer-nav">
-
-      <a href="#home">
-        Home
-      </a>
-
-      <a href="#services">
-        Services
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#gallery">
-        Gallery
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#home">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#about">À propos</a>
+      <a href="#reviews">Avis</a>
+      <a href="#contact">Contact</a>
     </div>
-
 
     <div class="social">
-
-      <a
-        href="https://wa.me/2250554327726"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ◔ WhatsApp
-      </a>
-
-      &nbsp;
-
-      ◎ Instagram
-
-      &nbsp;
-
-      f Facebook
-
+      <a href="https://wa.me/2250554327726" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <span>Réseaux sociaux : liens à confirmer</span>
     </div>
 
-
-    <p>
-      © <span id="year"></span>
-      Yariel Scott.
-      All rights reserved.
-    </p>
-
+    <p>© <span id="year"></span> Yariel Scott. Tous droits réservés.</p>
   </footer>
 
+  <a class="floating-whatsapp" href="https://wa.me/2250554327726?text=Bonjour%20Yariel%20Scott%2C%20je%20souhaite%20demander%20un%20devis."
+    target="_blank" rel="noopener noreferrer" aria-label="Contacter Yariel Scott sur WhatsApp">WhatsApp</a>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
